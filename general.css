@@ -224,7 +224,8 @@ nav.active .menu {
   top: 80px;
   right: 0;
   z-index: 1;
-  background: white;
+  border: #fcd164 2px solid;
+  background: #3ea0e1;
 }
 
 nav.active .menu li {
@@ -233,6 +234,7 @@ nav.active .menu li {
 
 nav.active .menu a {
   font-size: 15px;
+  color: white;
 }
 
 /*****************************************************************/
