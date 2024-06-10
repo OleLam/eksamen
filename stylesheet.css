@@ -12,6 +12,12 @@ img {
 #h1-div {
   text-align: center;
 }
+
+.flex-sider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /*GRID MED BILLEDER*/
 .grid-forside {
   display: grid;
@@ -26,16 +32,27 @@ img {
   grid-template-columns: 1fr 1fr;
   padding: 20px;
 }
+
+#flex-ommig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /*overskrift ved om mig siden*/
 .olelam {
   font-size: 20px;
 }
 /*billeder*/
 .billede-forside {
-  width: 220px;
-  height: 150px;
+  width: 30vw;
+  height: auto;
   margin: 0 auto;
   border-radius: 20px;
+}
+
+.p-billede {
+  padding: 1vw;
+  font-size: 13px;
 }
 
 .grid-forside a:last-child {
@@ -63,6 +80,10 @@ img {
 
 .hjemmeside p {
   font-size: 20px;
+}
+.flex-sider-info {
+  max-width: 525px;
+  margin: auto;
 }
 /*FORMS*/
 
@@ -109,11 +130,11 @@ img {
 
 /************** DESKTOP **************/
 
-@media (min-width: 961px) {
+@media (min-width: 700px) {
   /*forside*/
   .billede-forside {
-    width: 333px;
-    height: 220px;
+    width: 30vw;
+    height: auto;
   }
   /*om mig side*/
   .logo-grid-ommigside {
@@ -122,6 +143,11 @@ img {
   #flex-ommig {
     flex-direction: row-reverse;
     justify-content: space-evenly;
+  }
+
+  .p-billede {
+    padding: 1vw;
+    font-size: 14px;
   }
 
   /*grid*/
@@ -182,8 +208,8 @@ img {
 
   /*de andre sider som website, emnesite osv*/
   .flex-sider {
-    display: flex;
     padding: 20px;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -192,6 +218,7 @@ img {
   }
   .flex-sider-info {
     width: 400px;
+    margin: 0;
   }
   /*FORM*/
   .form-container {

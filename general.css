@@ -57,15 +57,20 @@ body {
   font-family: "Roboto", sans-serif;
 }
 p {
-  padding: 15px;
+  padding: 11px;
   font-family: "Inter", sans-serif;
   /*margin-bottom: 10px;*/
   font-size: 14px;
   max-width: 60ch;
 }
 
+.p-ommig {
+  min-width: 200px;
+}
+
 .p-forside {
   padding: 40px;
+  margin: auto;
 }
 hr {
   margin: auto;
@@ -232,7 +237,7 @@ nav.active .menu a {
 
 /*****************************************************************/
 /*DESKTOP*/
-@media (min-width: 961px) {
+@media (min-width: 700px) {
   .burger {
     display: none;
   }
