@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*BILLEDER*/
+img {
+  display: block;
+  width: 100%;
+  border-radius: 50px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  background-color: #3ea0e1;
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+}
+/*LOGO*/
+.header-logo {
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  align-items: center;
+  font-size: larger;
+}
+#logo {
+  width: 80px;
+  max-height: 110px;
+  filter: invert(100%);
+}
+.ologo,
+.ologoform {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.social-medie {
+  padding: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+.outer-container {
+  background: #fcd164;
+  padding: 6px;
+  display: flex;
+  border-radius: 10px;
+  border: #086464 1px solid;
+  align-items: center;
+}
+/*BODY*/
+body {
+  background-color: #fdf9eb;
+  color: #3ea0e1;
+  font-family: "Roboto", sans-serif;
+}
+p {
+  padding: 15px;
+  font-family: "Inter", sans-serif;
+  /*margin-bottom: 10px;*/
+  font-size: 14px;
+  max-width: 60ch;
+}
+
+.p-forside {
+  padding: 40px;
+}
+hr {
+  margin: auto;
+  width: 90vw;
+}
+.ommig {
+  padding-right: 40px;
+}
+
+/*links til hjemmeside*/
+.hjemmeside {
+  color: rgba(0, 0, 238);
+  font-size: x-large;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*OVERSKRIFTER*/
+h2 {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 500;
+}
+h1 {
+  padding: 15px;
+  color: #3ea0e1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.projekter-forside {
+  padding: 50px;
+  text-align: center;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  font-size: 23px;
+  color: #3ea0e1;
+  margin: auto;
+}
+h4 {
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  color: #3ea0e1;
+  font-weight: 400;
+}
+/*BILLEDER*/
+.mig {
+  max-width: 230px;
+  padding: 10px;
+  border-radius: 80px;
+}
+.ole {
+  max-width: 120px;
+  border-radius: 500px;
+  margin-top: 40px;
+}
+/*FOOTER*/
+footer {
+  background-color: #3ea0e1;
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.flex-forside {
+  display: flex;
+  max-width: 100px;
+  max-height: 50px;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-section-1 {
+  display: flex;
+}
+/*****************************************************************/
+/*Burgermenu*/
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #444;
+  text-decoration: none;
+  font-family: inter;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: inline;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+nav.active .menu {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav.active .menu li {
+  margin: 10px 20px;
+}
+
+nav.active .menu a {
+  font-size: 15px;
+}
+
+/*****************************************************************/
+/*DESKTOP*/
+@media (min-width: 961px) {
+  .burger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu a {
+    color: white;
+  }
+  /*skrift typer og længe*/
+  p {
+    max-width: 60ch;
+    margin: auto;
+  }
+  .p-forside {
+    padding: 45px;
+    max-width: 75ch;
+  }
+  .mig {
+    max-width: 300px;
+    border-radius: 80px;
+  }
+  .padding-ommig {
+    padding-left: 50px;
+  }
+  .p-ommig {
+    max-width: 65ch;
+  }
+}

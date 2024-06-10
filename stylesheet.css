@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+/*forside*/
+
+#h1-div {
+  text-align: center;
+}
+/*GRID MED BILLEDER*/
+.grid-forside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 1px;
+}
+.grid-ommig,
+.logo-grid-ommigside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+/*overskrift ved om mig siden*/
+.olelam {
+  font-size: 20px;
+}
+/*billeder*/
+.billede-forside {
+  width: 220px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.grid-forside a:last-child {
+  grid-column-start: span 2;
+}
+
+.projekt-container {
+  /*skal have relative på ellers bliver den sat i midten af siden pga. den childs container. Skal have noget at have noget at forholde sig til, ellers forholder den sig til hele siden*/
+  position: relative;
+}
+.projekt-boks {
+  /*skal have absolute på for at blive i midten*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #baf1a6;
+  padding: 0.25rem;
+  border: #fadb8c 2px solid;
+  border-radius: 50%;
+}
+.hjemmeside .projekt-boks {
+  padding: 1.5rem;
+}
+
+.hjemmeside p {
+  font-size: 20px;
+}
+/*FORMS*/
+
+.form-container {
+  background-color: #fdf9eb;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(252, 219, 56);
+  width: 335px;
+}
+
+.form-gruppe {
+  margin-bottom: 15px;
+}
+
+.form-gruppe label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.form-gruppe input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 3px solid #3ea0e1;
+  border-radius: 4px;
+}
+
+.form-gruppe button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3ea0e1;
+  color: #fadb8c;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-gruppe button:hover {
+  background-color: #0056b3;
+}
+
+/************** DESKTOP **************/
+
+@media (min-width: 961px) {
+  /*forside*/
+  .billede-forside {
+    width: 333px;
+    height: 220px;
+  }
+  /*om mig side*/
+  .logo-grid-ommigside {
+    padding-left: 250px;
+  }
+  #flex-ommig {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  /*grid*/
+  .grid-forside {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .grid-forside a {
+    grid-column-start: span 2;
+    transition: ease-in-out 250ms;
+  }
+
+  .grid-forside a:last-child {
+    grid-column-start: span 3;
+  }
+
+  #urban-grid {
+    grid-column-start: span 3;
+  }
+
+  .grid-forside a:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+  }
+
+  /*flex form*/
+  .form-flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+  }
+  .form-flex h3 {
+    margin: 0;
+  }
+  .logo-grid-ommigside {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-ommig {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 140px;
+  }
+  .ommig {
+    grid-column-start: span 2;
+  }
+  .ommig p {
+    margin: 0;
+  }
+  /*hover, website site*/
+  .flex-sider .hjemmeside:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+  }
+
+  .flex-sider .hjemmeside {
+    transition: ease-in-out 250ms;
+  }
+
+  /*de andre sider som website, emnesite osv*/
+  .flex-sider {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .flex-sider-tekst {
+    width: 525px;
+  }
+  .flex-sider-info {
+    width: 400px;
+  }
+  /*FORM*/
+  .form-container {
+    width: 600px;
+    margin: auto;
+  }
+}
